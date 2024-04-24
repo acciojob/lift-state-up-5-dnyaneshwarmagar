@@ -12,8 +12,10 @@ const App = () => {
   };
   return (
     <div>
+      <h1>Parent Component</h1>
       <h1>{isLoggedIn ? 'You are logged in!' : 'Please log in'}</h1>
-      <Child isLoggedIn={isLoggedIn} onLogin={handleLogin} />
+      {isLoggedIn ? 'You are logged in!' : <Child isLoggedIn={isLoggedIn} onLogin={handleLogin} />}
+      
         {/* Do not remove the main div */}
        
     </div>
